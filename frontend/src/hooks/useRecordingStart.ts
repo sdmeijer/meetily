@@ -82,6 +82,7 @@ export function useRecordingStart(
   const checkTranscriptionModelReady = useCallback(async (): Promise<boolean> => {
     try {
       const provider = await getTranscriptionProvider();
+      if (provider === 'openaiCompatible') return true;
       const commands = getProviderCommands(provider);
 
       if (commands) {
