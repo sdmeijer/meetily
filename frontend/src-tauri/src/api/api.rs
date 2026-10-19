@@ -77,6 +77,16 @@ pub struct ModelConfig {
     pub api_key: Option<String>,
     #[serde(rename = "ollamaEndpoint")]
     pub ollama_endpoint: Option<String>,
+    #[serde(rename = "summarySystemPrompt")]
+    pub summary_system_prompt: Option<String>,
+    #[serde(rename = "summaryChunkSystemPrompt")]
+    pub summary_chunk_system_prompt: Option<String>,
+    #[serde(rename = "summaryChunkPrompt")]
+    pub summary_chunk_prompt: Option<String>,
+    #[serde(rename = "summaryCombineSystemPrompt")]
+    pub summary_combine_system_prompt: Option<String>,
+    #[serde(rename = "summaryCombinePrompt")]
+    pub summary_combine_prompt: Option<String>,
 }
 
 #[derive(Debug, Serialize, Deserialize)]
@@ -521,6 +531,11 @@ pub async fn api_get_model_config<R: Runtime>(
                         whisper_model: config.whisper_model,
                         api_key,
                         ollama_endpoint: config.ollama_endpoint,
+                        summary_system_prompt: config.summary_system_prompt,
+                        summary_chunk_system_prompt: config.summary_chunk_system_prompt,
+                        summary_chunk_prompt: config.summary_chunk_prompt,
+                        summary_combine_system_prompt: config.summary_combine_system_prompt,
+                        summary_combine_prompt: config.summary_combine_prompt,
                     }))
                 }
                 Err(e) => {
