@@ -1,3 +1,50 @@
+<!-- MEETILY_FORK_INTRO_START -->
+
+# Meetily — Community Fork
+
+> **Unofficial, experimental fork of Meetily Community.**
+
+This fork explores improvements to transcription and AI-assisted summarization, with a focus on locally controlled AI services.
+
+### Implemented and tested
+
+- Remote ASR integration.
+- OpenAI-compatible LLM integration.
+- Configurable summary prompts and templates.
+- Chunking for long transcripts.
+- Saving and restoring customized summary prompts.
+
+These features have been tested in a limited setup, not across all supported environments.
+
+### Backend architecture
+
+This fork supports a client-server architecture in which Meetily runs as the desktop application while AI processing is handled by separately hosted services.
+
+- **Speech recognition:** A remote Parakeet ASR service, accessed through an OpenAI-compatible transcription API.
+- **LLM processing:** A separately hosted LM Studio server, accessed through an OpenAI-compatible API.
+- **Long transcripts:** Chunk-based processing to make larger transcription summaries more manageable for local language models.
+- **Configuration:** ASR and LLM services are configured independently of the desktop application.
+
+This architecture has been tested in a local environment. The repository does not include a complete, preconfigured backend deployment. General compatibility and network security have not been independently validated.
+
+### Limitations
+
+- Summary accuracy is not fully validated.
+- AI-generated summaries require human verification.
+- General compatibility and security have not been independently validated.
+- This is not an official Meetily release.
+
+### Development and attribution
+
+Some fork-specific code changes were generated with assistance from **OpenAI ChatGPT** and tested by the repository maintainer.
+
+The original Meetily project and incorporated community contributions remain credited to their respective authors.
+
+For the original project and documentation, see [Meetily upstream](https://github.com/Zackriya-Solutions/meetily).
+
+---
+
+<!-- MEETILY_FORK_INTRO_END -->
 <div align="center" style="border-bottom: none">
     <h1>
         <img src="docs/Meetily-6.png" style="border-radius: 10px;" />
