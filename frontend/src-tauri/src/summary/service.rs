@@ -492,8 +492,10 @@ impl SummaryService {
                     1748  // 2048 - 300 for overhead
                 }
             }
+        } else if provider == LLMProvider::CustomOpenAI {
+            12000  // Local OpenAI-compatible models: chunk long transcripts for efficient processing
         } else {
-            // Cloud providers (OpenAI, Claude, Groq, CustomOpenAI) handle large contexts automatically
+            // Cloud providers (OpenAI, Claude, Groq) handle large contexts automatically
             100000  // Effectively unlimited for single-pass processing
         };
 
