@@ -34,6 +34,21 @@ This architecture has been tested in a local environment. The repository does no
 - General compatibility and security have not been independently validated.
 - This is not an official Meetily release.
 
+### Included changes
+
+This fork incorporates and adapts contributions from:
+
+- [PR #669](https://github.com/Zackriya-Solutions/meetily/pull/669) — OpenAI-compatible remote ASR integration and batch transcription support.
+- [PR #480](https://github.com/Zackriya-Solutions/meetily/pull/480) — Configurable summary prompts and customizable summary templates.
+
+Additional fork-specific fixes include:
+
+- Chunking support for long transcripts using CustomOpenAI.
+- Extended LLM request timeout handling.
+- Correct loading and display of saved summary prompts.
+
+These changes are included in this fork and are not necessarily part of the official upstream release.
+
 ### Development and attribution
 
 Some fork-specific code changes were generated with assistance from **OpenAI ChatGPT** and tested by the repository maintainer.
